@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>E5 Speaking Assessment</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#EBEBEB;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, width=1024" />
+	<script type="text/javascript" src="C:\Users\Khaled\Desktop\COMPLETE-PORTFOLIO-WEBSITE-main/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="C:\Users\Khaled\Desktop\COMPLETE-PORTFOLIO-WEBSITE-main/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="C:\Users\Khaled\Desktop\COMPLETE-PORTFOLIO-WEBSITE-main/VASTBranded.css"/>
+<script type="text/javascript" src="C:\Users\Khaled\Desktop\COMPLETE-PORTFOLIO-WEBSITE-main/SCORM_API_wrapper.js"></script>
+<style>
+.startPageButton { /* makes the buttons on the start page big */
+		height: 90px !important;
+	
+		line-height: 90px !important;
+		font-size: 33px !important;
+	}
+</style>	
+
+<script>
+function myCallback(hypeDocument, element, event) {
+    if (isScalePossible()){
+      window.myHypeContainerId = hypeDocument.documentId();
+      $('#' + window.myHypeContainerId).css({
+        '-moz-transform-origin': '0% 0%',
+        '-webkit-transform-origin': '0% 0%',
+        '-ms-transform-origin': '0% 0%',
+        '-o-transform-origin': '0% 0%',					
+        'transform-origin': '0% 0%',
+        margin: 0
+      });
+
+      scaleSite();
+      $(window).resize(scaleSite);
+    }
+    return true;
+  }
+
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":myCallback});
+
+
+  function scaleSite()
+  {
+  	var hypeContainer = $('#' + window.myHypeContainerId);
+    var containerWidth = hypeContainer.width();
+    var containerHeight = hypeContainer.height();
+    var parentWidth = hypeContainer.parent().width();
+    var parentHeight = hypeContainer.parent().height();
+    var scaleWidth = parentWidth / containerWidth;
+    var scaleHeight = parentHeight / containerHeight;
+    var scale = Math.min(scaleWidth, scaleHeight);
+    var left = (containerWidth * scale < parentWidth) ? ((parentWidth - (containerWidth * scale)) / 2) + 'px' : '0px';
+    var top = (containerHeight * scale < parentHeight) ? ((parentHeight - (containerHeight * scale)) / 2) + 'px' : '0px' ;
+    hypeContainer.css({
+        "-moz-transform"    : "scale("+scale+")",
+        "-webkit-transform" : "scale("+scale+")",
+        "-ms-transform"     : "scale("+scale+")",
+        "-o-transform"      : "scale("+scale+")",
+        "transform"         : "scale("+scale+")",
+        "left" : left,
+        "top" : top
+    });
+  }
+
+  function isScalePossible() 
+  {
+    can = 'MozTransform' in document.body.style;
+    if(!can) can = 'webkitTransform' in document.body.style;
+    if(!can) can = 'msTransform' in document.body.style;
+    if(!can) can = 'OTransform' in document.body.style;
+    if(!can) can = 'transform' in document.body.style;
+    if(!can) can = 'Transform' in document.body.style;
+    return can;
+  }
+
+document.onkeydown = function(e) {
+    if(e.keyCode == 123) {
+        e.preventDefault()
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        e.preventDefault()
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        e.preventDefault()
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        e.preventDefault()
+    }
+    if((e.ctrlKey || e.metaKey) && e.which == 83) { //prevent saving
+        e.preventDefault();
+    }
+    if((e.ctrlKey || e.metaKey) && e.which == 67) { //command+option+c ==> prevent opening web inspector
+        e.preventDefault()
+    }
+      if((e.ctrlKey || e.metaKey) && e.which == 73) { //command+option+c ==> prevent opening web inspector
+        e.preventDefault()
+    }
+    if((e.ctrlKey || e.metaKey) && e.which == 86) { //prevent pasting
+        e.preventDefault()
+    } 
+} 
+window.su = 1;
+window.eu = 3;
+window.mType = "";
+window.promptCounter = 0;
+window.yjmw8plefeivw = [];
+window.re3vjeovlormM = [
+//UNIT 1
+[
+[ // u1f1 adding a further point or comment
+  
+   {prompt: "You are telling your father about a new coffee shop. Add one further point. ",audio: "u1f1p17", image: ""},
+   ],
+ 
+[ // u1f2 talking about agendas
+  {prompt:"You are early to a meeting. You haven’t seen the agenda. Ask about the agenda. ",audio: "u1f2p14", image: ""},
+   ],
+
+[ // u1f3 interrupting politely
+   {prompt:"You have been listening to others discuss their views but now you want to express your own views. What can you say to join the discussion? ",  audio: "u1f3p15", image: ""},
+   {prompt:"Karima is giving a long explanation of her ideas about training. You disagree with her. What can you say to interrupt politely to express your disagreement? ",  audio: "u1f3p16", image: ""},
+   ],
+
+[ // u1f4 adjourning
+   {prompt:"You have finished all the agenda items and would like to close the meeting. What can you say? ", audio: "u1f4p15", image: ""},
+   {prompt:"The meeting has run out of time. Two agenda items remain. Suggest another time to discuss them and adjourn the meeting. ",  audio: "u1f4p16", image: ""},
+   ],
+ 
+[ // u1f5 bringing in others
+   {prompt:"You are the facilitator of a teleconference about the fire drill schedule. You want Amina to give her comments. What can you say? ",audio: "u1f5p15", image: ""},
+   {prompt:"You are leading a meeting about budget and expenses. Everyone has expressed their opinion except Eman. Bring her into the conversation. ",audio: "u1f5p16", image: ""},
+   ],
+
+[ // u1f6 inviting someone to continue
+   {prompt: "Nour is explaining an important point, but then stops. Invite her to continue.", audio: "u1f6p15", image: ""},
+   {prompt: "Nabila is presenting at a small meeting. You have to step out briefly to sign a document, so Nabila stops presenting. Now that you’ve returned to your seat, invite her to continue.", audio: "u1f6p16", image: ""},
+	],
+
+],
+//UNIT 2
+[
+[//u2f1 expanding on and changing the subject
+   {prompt: "You are discussing turnover notes with your colleague. However, you would like to discuss the new safety policy. Change the subject.", audio: "u2f1p14", image: ""},
+   {prompt: "You are in a meeting discussing cybersecurity. Expand on the subject to discuss security in general.", audio: "u2f1p15", image: ""},
+   	],
+
+[ // u2f2 inviting questions
+   {prompt: "You have just finished your presentation about healthy eating. Invite questions.", audio: "u2f2p14", image: ""},
+   {prompt: "You are about to start a presentation. You would like everyone to wait until the end to ask questions. What can you say?", audio: "u2f2p15", image: ""},
+	],
+
+[ // u2f3 giving over the floor
+     {prompt:"You have finished introducing a guest speaker, Dr. Ghamdi, at a conference. Give the floor over to her. ", audio: "u2f3p14", image: ""},
+   {prompt:"You have finished your presentation on the importance of a good night’s sleep. Now give the floor over to your team member, Nour, to discuss driving safely. ", audio: "u2f3p15", image: ""},
+	],
+
+[ // u2f4 asking for and giving briefings
+    {prompt:"Brief a new apprentice on the most important things to succeed in Saudi Aramco training. ", audio: "u2f4p15", image: ""},
+	],
+ 
+[ // u2f5 returning to an earlier point
+  	{prompt:"Your friend was talking about self-study tests earlier and is now talking about safety courses. Return to the subject of self-study tests and ask how you can register. ", audio: "u2f5p14", image: ""},
+	],
+
+[ // u2f6 using a checklist
+    //images of keys and bags relative to other objects we can use to ID the images
+    // for keys use SS 82946368 and for bag use SS 471755459
+     {prompt:"You are about to operate in the field. Go through the PPE check list to ensure that you have everything you need to be safe. ", audio: "u2f6p17", image: "png"},
+	],
+
+],
+//UNIT 3
+[
+[ // u3f1 talking about mix-ups
+    {prompt:"You ordered a chemical suit for work, but you received coveralls. Explain the mix-up to the delivery person. ",audio: "u3f1p16", image: ""},	
+	],
+
+[ // u3f2 correcting oneself and others
+ {prompt:"Your supervisor thinks that Fatima is from Kuwait, but she is actually from Saudi Arabia. Correct your supervisor. ", audio: "u3f2p18", image: ""},
+	],
+
+[ // u3f3 giving tips
+    {prompt:"Give Saba some tips on how to improve her math skills. ",	audio: "u3f3p13", image: ""},
+	],
+
+[ // u3f4 expressing dis/satisfaction
+    {prompt:"With practice, your speaking skills have improved. Express your satisfaction with this improvement. ", audio: "u3f4p15", image: ""},
+	],
+
+[ // u3f5 talking about revisions and upgrades
+  	{prompt:"Think about the place where you live. How would you like it to be improved? Talk about upgrades. ", audio: "u3f5p17", image: ""},
+	],
+
+[ // u3f6 editing text
+    {prompt:"You notice that your co-worker has misspelled “Saudi Aramco” as “Saudi Aracmo” in her presentation. What can you tell her to do?", audio: "u3f6p1", image: ""},
+		{prompt:"A trainee has just submitted her writing task with a lot of errors. You want her to read it again and correct the mistakes. What can you say? ",  audio: "u3f6p16", image: ""},
+	{prompt:"You are a supervisor. Your clerk has just submitted this week’s progress report. In the report, she has used “YAB” instead of “YNB” for Yanbu’, by mistake. Ask her to change YAB to YNB. ", audio: "u3f6p17", image: ""},
+    ],
+    
+],
+//UNIT 4
+[
+[ // u4f1 urging action
+ 	{prompt:"Your colleague has lost his ID card. Urge action. ",  audio: "u4f1p18", image: ""},   
+	],
+
+[ // u4f2 offering and politely refusing assistance
+ 	{prompt:"You are changing the tire on your car by the side of the road. Someone offers help. Politely refuse the assistance. ", audio: "u4f2p17", image: ""},
+	],
+
+[ // u4f3 talking about (lack of) anxiety
+  	{prompt:"The plant you are working in is having a shutdown. You have experienced this before. Express your lack of anxiety. ",  audio: "u4f3p15", image: ""},
+	],
+
+[ // u4f4 giving assurances
+ 	{prompt:"Your co-worker doubts that your idea will be a success. Assure your coworker. ",  audio: "u4f4p16", image: ""},
+	],
+
+[ // u4f5 volunteering and asking for volunteers
+ 	{prompt:"Ask for a volunteer to donate blood. ",  audio: "u4f5p15", image: ""},		
+    ],
+
+[ // u4f6 assigning and delegating tasks
+	{prompt:"You are making a video. You need a writer, a cameraman, and a video editor. Assign these tasks to members of your team. ",  audio: "u4f6p15", image: ""},
+	],
+],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //UNIT 5
+ 
+ 
+ 
+[
+
+
+[ // u5f1 talking about properties
+  
+	{prompt:"Tetraethyl lead does not react when you mix it with other chemicals, but it will hurt you if you put it on your skin. Describe its properties.",  audio: "u5f1p2", image: ""},
+	
+    ],
+
+[ // u5f2 forming opposites
+{prompt:"Your co-worker wants to know the opposite of activate. Help\xa0him.",  audio: "u5f2p8", image: ""},
+{prompt: "Your co-worker said, “The cost is an unadvantage.” Tell your co-worker the correct opposite of advantage.",audio: "u5f2p11",image: ""},
+	],
+	
+	
+	[// u5f3 talking about equivalence
+	
+	 {
+                prompt: "You want to know what 20 kg is in pounds. Ask about equivalency. ",
+                audio: "u5f3p12",
+                image: ""
+            },
+
+
+],
+[ // u5f4 talking about dependency
+{prompt:"You use your car each day to drive to work. Talk about dependency. ",  audio: "u5f4p15", image: ""}, 
+{prompt: "Your supervisor asks, “Can you attend a meeting today at 3 p.m.?” You have a medical appointment today at 1 p.m. Answer your supervisor and talk about dependency.",audio: "u5f4p1",image: ""},
+ {prompt: "Your friend asks, “Can you come to the beach on Friday?” You have a lot of work that you need to do this weekend. Answer your friend and talk about dependency.",audio: "u5f4p2",image: ""},
+ ],
+    
+[ // u5f5 talking about reliability
+	{prompt:"Your brother's car has been to the mechanic's shop 4 times in the past 3 months. Ask your brother about the reliability of his car. ",  audio: "u5f5p13", image: ""}, 
+	],
+
+
+
+],
+
+
+
+
+
+[
+//UNIT 6
+[ // u6f1 talking about risks, costs, and benefits
+{prompt: "What are the benefits and risks of drinking coffee?",audio: "u6f1p6",image: ""},
+	{prompt:"A car you want to buy is for sale for a low price, but it has electrical problems. Talk about costs and benefits. ", audio: "u6f1p13", image: ""},
+		],
+
+[ // u6f2  proposing an idea
+ {prompt:"You need a new system for taking attendance. Propose\xa0this.", audio: "u6f2p7", image: ""},
+   ],
+        [// u6f3 talking about feasibility
+ {prompt: "Your co-worker is 59 years old, but he wants to continue working at Saudi Aramco for 20 more years. Tell him how feasible this is.",audio: "u6f3p4",image: ""},
+{prompt: "Do you think you will get an “Excellent” rating for this speaking milestone? Talk about\xa0feasibility.",audio: "u6f3p5",image: ""},
+ 
+],
+[ // u6f4  postponing
+   
+	{prompt:"The project kickoff meeting cannot go ahead because too many team members are on leave. Explain this to your supervisor. Talk about postponing.", audio: "u6f4p5", image: ""},
+   ],
+
+[ // u6f5 talking about preferences
+  {prompt: "One of your friends likes pizza with mushrooms on it. Another friend only likes cheese pizza. What about you? What are your preferences? ",audio: "u6f5p11",image: ""}, 
+  ],
+  
+  
+  [ // u6f5 talking about preferences
+  
+  
+  {prompt: "Ask Jim for his evaluation of the company’s performance.",audio: "u6f6p7",image: ""},
+    
+
+    ],
+],
+ //UNIT 7
+[
+
+
+[ // u7f2 talking about in/sufficiency
+    {prompt:"The project is going to cost $200 million. Your department has $150 million in its budget. Tell your co-worker and talk about sufficiency.", audio: "u7f2p1", image: ""},
+		],
+
+[ // u7f3 making reference
+  {prompt:"You’re forwarding an email. What can you say to make reference to the email at the bottom of your message?", audio: "u7f3p4", image: ""},
+		],
+
+
+
+[ // u7f6 predicting
+    {prompt:"Predict where you’ll be living 10 years from now.", audio: "u7f6p1", image: ""},
+	   ],
+],
+ //UNIT 8
+[
+
+
+[ // u8f2 talking about responsibility
+	{prompt:"Who has to complete work on time? Talk about responsibility.", audio: "u8f2p9", image: ""},
+		],
+[ // u8f2 talking about responsibility
+
+{
+                prompt: "Yesterday, the fire extinguisher was missing from your office. It’s also missing today. Tell your co-worker. Talk about continuity or change.",
+                audio: "u8f3p3",
+                image: ""
+            }
+],
+],
+ //UNIT 9
+[ 
+[ // u9f1 u9f1 speculating
+	{prompt: "Speculate about your career with Saudi Aramco. ",audio: "u9f1p13",image: ""},
+	{ prompt: "Make a speculation about what the most popular car in Saudi Arabia will be next year.",audio: "u9f1p14",image: ""},
+	{prompt: "Your co-worker, Reema, is 2 hours late for work. Speculate on why she is late. ",audio: "u9f1p15",image: ""},
+	{prompt:"Your co-worker, Laila, speculates that, in 10 years, more than 50% of the Aramco workforce will be women. Comment on her speculation. ", audio: "u9f1p19", image: ""},
+		],
+
+[ // u9f2 asking about evidence, talking about evidence, and talking about a lack of evidence
+	{prompt:"Your friend tells you that all trainees are going to get a 500 riyal bonus next month. Ask for evidence. ",  audio: "u9f2p7", image: ""},
+   ],
+	
+	
+	
+	[ // u9f2 asking about evidence, talking about evidence, and talking about a lack of evidence
+
+	
+	{
+                prompt: "What is an L day? ",
+                audio: "u9f4p6",
+                image: ""
+            },
+
+	],
+[ // u9f6 following up
+	{prompt:"You call HR for a second time about renewing your driving license. What can you say to follow up? ", audio: "u9f6p1", image: ""},
+    ],
+]
+
+];
+
+window.shuffle =  function(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+		while (0 !== currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}	
+		return array;
+	}
+	
+	
+window.loadSound = function(soundname){
+    		
+soundPlayer.src = 'C:\\Users\\Khaled\\Desktop\\COMPLETE-PORTFOLIO-WEBSITE-main\\Audio\\' + soundname + '.mp3';
+        
+		}
+		
+window.filterUnits = function(start){
+var newVal = parseInt(start)+2;
+$(".end").each(function(){jQuery($(this)).toggleOption(true);});
+document.getElementById('endUnit').value = newVal;
+
+for(var i = 2; i<=8; i++){
+	if(i<newVal){
+	
+		//$("#"+i).hide();
+		jQuery($("#"+i)).toggleOption(false);
+	}
+
+}
+
+
+}
+
+window.checkForDuplicates = function(array, keyName) {
+  return new Set(array.map(item => item[keyName])).size !== array.length
+}
+
+
+</script>
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="e5speakingassessment_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:1024px;height:768px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="C:\Users\Khaled\Desktop\COMPLETE-PORTFOLIO-WEBSITE-main\e5speakingassessment_hype_generated_script.js80615"></script>
+	</div>
+	
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>To change the version number on every page, simply change the number here once:</div>
+		<div>E5</div>
+		<div>E5
+Final Speaking Assessment
+</div>
+		<div>1
+</div>
+		<div>Begin
+</div>
+		<div>Test</div>
+		<div>Developer</div>
+		<div>To change the level that this book refers to (i.e. to make a new book) change this:</div>
+		<div>
+
+
+
+
+
+Please say your name and badge number.
+
+ Then, tap OK.</div>
+		<div>
+</div>
+		<div>Start</div>
+		<div></div>
+		<div>You will see and hear 20 random prompts from Level 2. </div>
+		<div>
+
+You will see and hear one prompt for each function in Units 1 to 3.
+
+ After you hear each prompt, you should respond.
+
+ If you see a picture with your prompt,
+you can tap the button to make the picture bigger.
+
+ After you respond, tap the “Next” button to move to the next prompt.
+
+When you are ready, tap the “Start” button to begin.</div>
+		<div>Speaking Assessment</div>
+		<div>OK</div>
+		<div>Units 1 - 9 </div>
+		<div>Next
+</div>
+		<div>Restart</div>
+		<div>X</div>
+		<div>Play
+</div>
+		<div></div>
+		<div>Prompt reference:</div>
+		<div>Yes</div>
+		<div>This is the end of your
+speaking assessment.</div>
+		<div>
+Are you sure you want to exit
+the speaking milestone?</div>
+		<div></div>
+		<div>No</div>
+		<div>To: Unit 3Unit 4Unit 5Unit 6Unit 7Unit 8Unit 9</div>
+		<div>From: Unit 1Unit 2Unit 3Unit 4Unit 5Unit 6Unit 7</div>
+		<div>E5
+Speaking Assessment Practice
+</div>
+		<div>Select the units that you want your practice assessment to cover: </div>
+		<div>Speaking Retest (Units 1 - 9)
+</div>
+		<div>Speaking Milestone 1 (Units 1 - 4)
+</div>
+		<div>E5
+Speaking Assessment
+</div>
+		<div>Speaking Milestone 2 (Units 5 - 9)
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>

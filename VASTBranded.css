@@ -1,0 +1,1080 @@
+/* NOTE: updated 2 Feburary 2021
+- added drop shadow when tappable is clicked - MYR
+- added drag class - EDJ
+- added 5px right padding to draggables - EDJ
+- added !important to heading-sub color - JAG
+- added ability to remove icon on sweet alerts - JAG
+- added blue to button border so that if developer forgets to change it to teal, it's still colored teal - JAG
+*/
+
+
+/* all page text */
+div {
+  font-family: "Trebuchet MS" !important;
+  font-size: 20px !important;
+  color: black;
+}
+
+.tropicalFont {
+	font-family: 'tropicananfregular' !important;
+	color: darkorange !important;
+  font-size: 180px !important;
+}
+
+/* standard buttons */
+.button {
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+  line-height: 20px !important;
+  background-color: white !important;
+  border-radius: 5px  !important;
+  border: 3px solid !important;
+  font-size: 24px  !important;
+  height: 22px  !important;
+  font-family: "Trebuchet MS"  !important;
+  /* what do the filters do EJ and why is the webkit version necessary? */
+  -webkit-filter: drop-shadow(0px 3px 8px 0px rgba(0,0,0,0.4));
+  filter: drop-shadow(0px 3px 8px 0px rgba(0,0,0,0.4)); /* this is flagged as invalid by CSS checker */
+}
+
+/* Have buttons auto enlarge based on text -MYR*/
+.button-auto {
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+  line-height: 22px !important;
+  background-color: white !important;
+  border-radius: 5px  !important;
+  border: 3px solid !important;
+  font-size: 24px  !important;
+  height: auto  !important;
+  font-family: "Trebuchet MS"  !important;
+  /* what do the filters do EJ and why is the webkit version necessary? */
+  -webkit-filter: drop-shadow(0px 3px 8px 0px rgba(0,0,0,0.4));
+  filter: drop-shadow(0px 3px 8px 0px rgba(0,0,0,0.4)); /* this is flagged as invalid by CSS checker */
+}
+
+.ball {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7)) !important;
+
+}
+
+/* VAST Teal border (blue in case a developer converting from in-house styles forgets to change the class)*/
+.border-teal, .border-blue {
+  border-color: #468283 !important;
+}
+
+/* VAST Green border */
+.border-green {
+  border-color: #84BD00 !important;
+}
+
+/* VAST Orange border */
+.border-orange {
+  border-color: #f68d2e !important;
+}
+
+/* ensure text is orange and shadow gone when button tapped */
+.button:active {
+  color: #f68d2e !important;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+/* for toggling a button so it 'stays down' */
+.button-selected {
+  box-shadow: none !important;
+  border-color: #F68D2E !important;
+}
+
+/* for square buttons e.g. on MC widgets */
+.button-square {
+  height: 18px !important;
+  width: 18px !important;
+  line-height: 18px !important;
+}
+
+/* white boxes for presenting text to user */
+.callout {
+  background-color: white !important;
+  border: solid white 1px !important;
+  border-radius: 5px  !important;
+  padding-left: 5px !important;
+  padding-top: 5px !important;
+}
+
+/* styling draggable elements */
+.drag {
+  padding-right: 5px !important;
+}
+
+/* arrows to left and right of gallery cell */
+.gallery-arrow {
+  font-family: "ChalkboardSE-Regular" !important;
+  font-size: 48px !important;
+  font-weight: bold !important;
+  line-height: 20px !important;
+  color: white !important;
+  background-color: none !important;
+  text-shadow: 0px 3px 8px rgba(0,0,0,0.4) !important;
+}
+
+.gallery-arrow-disabled {
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.gallery-caption {
+  font-weight: bold !important;
+  text-align: center !important;
+  background-color: white !important;
+}
+
+.gallery-dot {
+  font-size: 30px !important;
+  font-weight: bold !important;
+  color: #b0b3b3 !important;
+  line-height: 40px !important;
+}
+
+/* gallery widget dots to show cell selected */
+.gallery-dot-selected {
+  color: #676a6e !important;
+}
+
+/* captions under multiple items e.g. Picture A, Picture B, etc. */
+.heading-caption {
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+/* standard VAST Teal larger page heading */
+.heading-page {
+  font-size: 24px !important; /* override standard font size set in div above */
+  font-weight: bold !important;
+  color: #468283  !important;
+}
+
+/* standard VAST Purple sub-heading */
+.heading-sub {
+  font-weight: bold !important;
+  color: #894b95 !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.highlighter-teal {
+  background-color: rgba(70, 130, 131, 0.3) !important;
+  border-color: rgb(70,130,131) !important;
+}
+
+.highlighter-green {
+  background-color: rgba(132,189,0,0.3) !important;
+  border-color: rgb(132,189,0) !important;
+}
+
+.highlighter-orange {
+  background-color: rgba(246,141,46,0.3) !important;
+  border-color: rgb(246,141,46) !important;
+}
+
+/* a semi-transparent shield over whatever's underneath */
+.overlay {
+  background-color: rgba(0,0,0,0.5) !important;
+  opacity: 50% !important;
+}
+
+/* number of question on multiple-choice activities */
+.question-number {
+  font-style: bold !important;
+  padding: none !important;
+}
+
+/* total number of questions for MC activity */
+.question-total {
+  font-size: 15px !important;
+  color: #b0b3b3 !important;
+  padding: none !important;
+}
+
+/* these are styles for tables */
+.table-cell {
+  box-sizing: border-box !important;
+  background-color: white !important;
+  border: solid #b0b3b3 !important;
+  border-width: 0 0 1px 1px !important;
+  margin: none !important;
+  padding: 5px !important;
+  font-family: 'Trebuchet MS' !important;
+  font-size: 20px !important;
+}
+
+.table-header {
+  box-sizing: border-box !important;
+  border-top: solid #b0b3b3 1px !important;
+  border-bottom: solid #468283 2px !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  color: #468283 !important;
+}
+
+/* for right column elements add a right cell border */
+.table-right {
+  border-right: solid #b0b3b3 1px !important;
+}
+
+/* for bold gray text for sub-headings */
+.table-subheading {
+  font-weight: bold !important;
+  color: #676a6e !important;
+}
+
+.table-subheading-top {
+  border-top: 1px solid #b0b3b3 !important;
+  padding-top: 4px !important;
+}
+
+/* add a shadow to show something is tappable */
+.tappable {
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+}
+
+/* add a shadow to a png file with transparency */
+.tappable-png {
+  -webkit-filter: drop-shadow(0px 3px 8px rgba(0,0,0,0.4)) !important;
+}
+
+.tappable-png:active, .tappable-png:focus {
+  -webkit-filter: drop-shadow(0px 0px 0px) !important;
+}
+
+/* text areas and text inputs where user adds data*/
+.text-input {
+  font-family: "Trebuchet MS" !important;
+  font-size: 20px !important;
+  line-height: 27px !important;
+  height: 100% !important;
+  width: 100% !important;
+  border-style: solid !important;
+  border-color: #b0b3b3 !important;
+  border-radius: 3px !important;
+  border-width: 1px !important;
+  background-color: white !important;
+  padding-left: 4px !important;
+  -webkit-appearance: none;
+  box-sizing: border-box !important; /* essential to make padding, height and width below work properly */
+  padding-top: 0px !important;
+  resize: none !important;
+}
+
+/* for inputs in tables where we don't want any border */
+/* ADD the following to the .text-input class above */
+.text-input-table {
+  border: none !important;
+}
+
+.text-input-table-transparent {
+  background: none !important;
+}
+
+/* to center align text */
+.text-center {
+  text-align: center !important;
+}
+
+/* check button text when delay active */
+.text-check-delay {
+  font-size: 14px !important;
+  font-weight: normal !important;
+  line-height: 22px !important;
+}
+
+/* for styling the instructions on developer scene page */
+.text-developer {
+  padding: 5px !important;
+  color: red !important;
+  background-color: yellow !important;
+}
+
+/**********************************
+ styles below override normal styles for special use cases
+ **********************************/
+.text-huge {
+  font-size: 250px !important;
+}
+
+.text-larger {
+  font-size: 30px !important;
+}
+
+.text-smaller {
+  font-size: 16px !important;
+}
+
+.text-tiny {
+  font-size: 3px !important;
+}
+
+.text-table {
+  display: table !important;
+}
+
+/* NOTE: this does not apply until the widget actually runs */
+.vertical-align {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.list {
+  margin-left: 0.5em !important;
+  padding-left: 2.5em !important;
+}
+
+/* NOTE: for drop downs */
+.dropDownMenu {
+    display:inline-block !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    border: 0px solid #929292 !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0px 2px rgba(0,0,0,0.2) !important;
+    font-family: "Trebuchet MS" !important;
+    font-size: 20px !important;
+    overflow: hidden !important;
+    background-color: #fff !important;
+}
+.option0s {
+    height: 25px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-top: 3px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    background-color: #fff !important;
+    border: 1px solid rgba(0,0,0,0) !important;
+    border-radius: 3px !important;
+}
+.option {
+    height: 25px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-top: 3px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    background-color: rgba(0,0,0,0.07) !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
+    border-radius: 3px !important;
+}
+.selectedOption {
+    background-color: rgba(0,0,0,0.25) !important;
+}
+.openedMenu {
+    box-shadow: 0 0px 15px rgba(0,0,0,0.5) !important;
+}
+.caret {
+    background-repeat: no-repeat !important;
+    background-size: 50% 30% !important;
+    background-position: 50% 50% !important;
+    position: absolute !important;
+    width: 35px !important;
+    height: 39px !important;
+    right: 0px !important;
+    top: 0px !important;
+}
+.dropDownMenuSupport {
+    height: 39px !important;
+}
+.errorMessage{
+    padding: 30px !important;
+    position: fixed !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    left: 0px !important;
+    top: 0px !important;
+    background-color: rgba(0,0,0,0.7) !important;
+    color: #fff !important;
+    z-index: 9999 !important;
+}
+.listOfErrorMessage {
+    font-size: 12px !important;
+    color: #fff !important;
+    font-weight: normal !important
+}
+.divSolution{
+    margin-top: 10px !important;
+    font-size: 18px !important;
+    color: #fff !important;
+    font-weight: normal !important
+}
+/* NOTE: End of drop down styling */
+
+/* NOTE: Everything below is for sweetAlert */
+
+/* this overwrites the styling that the sweetAlert.min.js file adds to the OK button */
+.confirm {
+  background-color: #468283 !important;
+  box-shadow: rgba(70, 130, 131, 0.8) 0px 0px 2px !important;
+}
+
+.sweet-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1000; }
+
+.sweet-alert {
+  background-color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  width: 240px; /* is 240px default */
+  padding: 17px;
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -137px; /* negative of half sweet alert width plus padding (which is 17) e.g. 240/2 + 17 = -137 */
+  margin-top: -100px;
+  overflow: hidden;
+  display: none;
+  z-index: 2000; }
+  @media all and (max-width: 540px) {
+    .sweet-alert {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      left: 10px;
+      right: 10px; } }
+  .sweet-alert h2 {
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: none;
+    position: relative;
+    margin: 10px 0;
+    padding: 0;
+    line-height: 22px;
+    display: block; }
+  .sweet-alert p {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: normal; }
+  .sweet-alert button {
+    background-color: #F68D2E;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px 16px;
+    margin: 13px 5px 0 5px;
+    cursor: pointer; }
+    .sweet-alert button:focus {
+      outline: none;
+      box-shadow: 0 0 2px rgba(128, 179, 235, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.05); }
+    .sweet-alert button:hover {
+      background-color: #468283; }
+    .sweet-alert button:active {
+      background-color: #84BD00; }
+    .sweet-alert button.cancel {
+      background-color: #B0B3B3; }
+      .sweet-alert button.cancel:hover {
+        background-color: #c8c8c8; }
+      .sweet-alert button.cancel:active {
+        background-color: #B0B3B3; }
+      .sweet-alert button.cancel:focus {
+        box-shadow: rgba(197, 205, 211, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset !important; }
+    .sweet-alert button::-moz-focus-inner {
+      border: 0; }
+  .sweet-alert[data-has-cancel-button=false] button {
+    box-shadow: none !important; }
+  .sweet-alert .icon {
+    width: 80px;
+    height: 80px;
+    border: 4px solid;
+    border-color: #B0B3B3;
+    border-radius: 50%;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box; }
+    .sweet-alert .icon.error {
+      border-color: #f68d2e; }
+      .sweet-alert .icon.error .x-mark {
+        position: relative;
+        display: block; }
+      .sweet-alert .icon.error .line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f68d2e;
+        display: block;
+        top: 37px;
+        border-radius: 2px; }
+        .sweet-alert .icon.error .line.left {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          left: 17px; }
+        .sweet-alert .icon.error .line.right {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          right: 16px; }
+    .sweet-alert .icon.warning {
+      border-color: #f68d2e; }
+      .sweet-alert .icon.warning .body {
+        position: absolute;
+        width: 5px;
+        height: 47px;
+        left: 50%;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+        background-color: #f68d2e; }
+      .sweet-alert .icon.warning .dot {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        left: 50%;
+        bottom: 10px;
+        background-color: #f68d2e; }
+    .sweet-alert .icon.info {
+      border-color: #468283; }
+      .sweet-alert .icon.info::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 29px;
+        left: 50%;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+        background-color: #468283; }
+      .sweet-alert .icon.info::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+        background-color: #468283; }
+    .sweet-alert .icon.success {
+      border-color: #84BD00; }
+      .sweet-alert .icon.success::before, .sweet-alert .icon.success::after {
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: white;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .sweet-alert .icon.success::before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px; }
+      .sweet-alert .icon.success::after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0px 60px;
+        transform-origin: 0px 60px; }
+      .sweet-alert .icon.success .placeholder {
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(165, 220, 134, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2; }
+      .sweet-alert .icon.success .fix {
+        width: 5px;
+        height: 90px;
+        background-color: white;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+      .sweet-alert .icon.success .line {
+        height: 5px;
+        background-color: #84BD00;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2; }
+        .sweet-alert .icon.success .line.tip {
+          width: 25px;
+          left: 14px;
+          top: 46px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        .sweet-alert .icon.success .line.long {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+    .sweet-alert .icon.custom {
+      background-size: contain;
+      border-radius: 0;
+      border: none;
+      background-position: center center;
+      background-repeat: no-repeat; }
+
+/* NOTE: if you don't want an icon on your sweet alerts, uncomment the class below */
+/*
+.sweet-alert .icon {
+  display: none !important;
+}
+*/
+
+
+
+/*
+ * Sweet alert animations
+ */
+@-webkit-keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7); }
+  45% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); }
+  80% {
+    transform: scale(0.95);
+    -webkit-tranform: scale(0.95); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-moz-keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7); }
+  45% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); }
+  80% {
+    transform: scale(0.95);
+    -webkit-tranform: scale(0.95); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7); }
+  45% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); }
+  80% {
+    transform: scale(0.95);
+    -webkit-tranform: scale(0.95); }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-webkit-keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5); } }
+@-moz-keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5); } }
+@keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+  100% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5); } }
+.showSweetAlert {
+  -webkit-animation: showSweetAlert 0.3s;
+  -moz-animation: showSweetAlert 0.3s;
+  animation: showSweetAlert 0.3s; }
+
+.hideSweetAlert {
+  -webkit-animation: hideSweetAlert 0.2s;
+  -moz-animation: hideSweetAlert 0.2s;
+  animation: hideSweetAlert 0.2s; }
+
+@-webkit-keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+@-moz-keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+@keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+@-webkit-keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+@-moz-keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+@keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); } }
+@-moz-keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); } }
+@keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg); } }
+.animateSuccessTip {
+  -webkit-animation: animateSuccessTip 0.75s;
+  -moz-animation: animateSuccessTip 0.75s;
+  animation: animateSuccessTip 0.75s; }
+
+.animateSuccessLong {
+  -webkit-animation: animateSuccessLong 0.75s;
+  -moz-animation: animateSuccessLong 0.75s;
+  animation: animateSuccessLong 0.75s; }
+
+.icon.success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  -moz-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in; }
+
+@-webkit-keyframes animateErrorIcon {
+  0% {
+    transform: rotateX(100deg);
+    -webkit-transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    opacity: 1; } }
+@-moz-keyframes animateErrorIcon {
+  0% {
+    transform: rotateX(100deg);
+    -webkit-transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    opacity: 1; } }
+@keyframes animateErrorIcon {
+  0% {
+    transform: rotateX(100deg);
+    -webkit-transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    opacity: 1; } }
+.animateErrorIcon {
+  -webkit-animation: animateErrorIcon 0.5s;
+  -moz-animation: animateErrorIcon 0.5s;
+  animation: animateErrorIcon 0.5s; }
+
+@-webkit-keyframes animateXMark {
+  0% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+@-moz-keyframes animateXMark {
+  0% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+@keyframes animateXMark {
+  0% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+.animateXMark {
+  -webkit-animation: animateXMark 0.5s;
+  -moz-animation: animateXMark 0.5s;
+  animation: animateXMark 0.5s; }
+
+@-webkit-keyframes pulseWarning {
+  0% {
+    border-color: #f68d2e; }
+  100% {
+    border-color: #896236; } }
+@-moz-keyframes pulseWarning {
+  0% {
+    border-color: #f68d2e; }
+  100% {
+    border-color: #896236; } }
+@keyframes pulseWarning {
+  0% {
+    border-color: #f68d2e; }
+  100% {
+    border-color: #896236; } }
+.pulseWarning {
+  -webkit-animation: pulseWarning 0.75s infinite alternate;
+  -moz-animation: pulseWarning 0.75s infinite alternate;
+  animation: pulseWarning 0.75s infinite alternate; }
+
+@-webkit-keyframes pulseWarningIns {
+  0% {
+    background-color: #f68d2e; }
+  100% {
+    background-color: #896236; } }
+@-moz-keyframes pulseWarningIns {
+  0% {
+    background-color: #f68d2e; }
+  100% {
+    background-color: #896236; } }
+@keyframes pulseWarningIns {
+  0% {
+    background-color: #f68d2e; }
+  100% {
+    background-color: #896236; } }
+
+
+/* NOTE: original pulse colors below
+
+@-webkit-keyframes pulseWarning {
+  0% {
+    border-color: #F8BB86; }
+  100% {
+    border-color: #F68D28; } }
+@-moz-keyframes pulseWarning {
+  0% {
+    border-color: #F8BB86; }
+  100% {
+    border-color: #F68D28; } }
+@keyframes pulseWarning {
+  0% {
+    border-color: #F8BB86; }
+  100% {
+    border-color: #F68D28; } }
+.pulseWarning {
+  -webkit-animation: pulseWarning 0.75s infinite alternate;
+  -moz-animation: pulseWarning 0.75s infinite alternate;
+  animation: pulseWarning 0.75s infinite alternate; }
+
+@-webkit-keyframes pulseWarningIns {
+  0% {
+    background-color: #F8BB86; }
+  100% {
+    background-color: #F68D28; } }
+@-moz-keyframes pulseWarningIns {
+  0% {
+    background-color: #F8BB86; }
+  100% {
+    background-color: #F68D28; } }
+@keyframes pulseWarningIns {
+  0% {
+    background-color: #F8BB86; }
+  100% {
+    background-color: #F68D28; } }
+
+ */
+
+.pulseWarningIns {
+  -webkit-animation: pulseWarningIns 0.75s infinite alternate;
+  -moz-animation: pulseWarningIns 0.75s infinite alternate;
+  animation: pulseWarningIns 0.75s infinite alternate; }
